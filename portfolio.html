@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for Icons -->
+</head>
+<body>
+  <!-- Spinner -->
+  <div class="spinner-border text-primary" role="status" id="spinner" style="display:none;">
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <!-- Navbar (Top) -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: white;">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" onclick="navigate(event, 'index.html')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" onclick="navigate(event, 'contact.html')">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html" onclick="navigate(event, 'portfolio.html')">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Weather.html" onclick="navigate(event, 'Weather.html')">Weather</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Ecommerce.html" onclick="navigate(event, 'Ecommerce.html')">E-commerce</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sidebar (Left) -->
+  <div class="sidebar bg-dark text-white p-3 d-none d-md-block" style="height: 100vh; position: fixed; top: 56px; left: 0; width: 200px;">
+    <!-- Social Media Links -->
+    <div class="mt-5">
+      <a href="https://www.instagram.com/simply_gelou/" target="_blank" class="text-white d-block mb-3">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.facebook.com/Carpio.Angelou" target="_blank" class="text-white d-block mb-3">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <a href="https://myaccount.google.com/u/1/?hl=en&utm_source=OGB&utm_medium=act&gar=WzJd&pli=1" target="_blank" class="text-white d-block">
+        <i class="fab fa-google"></i> Google
+      </a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content" style="margin-left: 220px;"> <!-- Added margin to prevent overlap with the sidebar -->
+    <!-- Hero Section -->
+    <div id="hero" class="hero text-center py-5" style="background: linear-gradient(to right, #0066ff, #00ccff);">
+      <img src="me.jpg" alt="Angelou Carpio" class="rounded-circle mb-3" style="max-width: 150px;">
+      <h1 class="display-4 text-white">Hello, I'm Angelou Carpio</h1>
+      <p class="lead text-white">IT Student passionate about software development, web design, and technology solutions.</p>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+      <h2>About Me</h2>
+      <p>
+        I am an IT student specializing in web development and software engineering. My focus is on building creative and efficient solutions to complex problems. I enjoy exploring new technologies and improving my skills through hands-on projects.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+      <h2>My Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="project-card">
+            <h5>Flag Quiz Game</h5>
+            <p>A trivia game that challenges users to identify flags from different countries. Built with JavaScript and Firebase.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <h5>Weather App</h5>
+            <p>A web app that displays real-time weather information using OpenWeather API. Fully responsive and interactive.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <h5>E-commerce Website</h5>
+            <p>A dynamic e-commerce platform with product browsing, cart functionality, and secure payment integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="container">
+      <h2>Education</h2>
+      <p>Bachelor of Science in Information Technology (Ongoing)</p>
+      <p>Specialization: Web Development and Software Engineering</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:angelou.carpio@example.com">angelou.carpio@example.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/angeloucarpio</a></p>
+      <p>GitHub: <a href="#">github.com/angeloucarpio</a></p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p>© 2024 Angelou Carpio. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom Navigate Function -->
+  <script>
+    function navigate(event, target) {
+      event.preventDefault();
+      window.location.href = target;
+    }
+  </script>
+</body>
+</html>
