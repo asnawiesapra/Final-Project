@@ -67,11 +67,11 @@
 
         /* Contact Form Styling */
         .contact-form {
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
         .contact-form:hover {
@@ -80,19 +80,20 @@
 
         .contact-form label {
             font-weight: 600;
-            color: #333;
+            color: #333333;
         }
 
         .contact-form .form-control {
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            border-radius: 6px;
+            border: 1px solid #cccccc;
+            padding: 12px;
             box-shadow: none;
-            padding: 10px;
+            transition: border-color 0.3s ease-in-out;
         }
 
         .contact-form .form-control:focus {
             border-color: #007bff;
-            box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
         }
 
         .contact-form button {
@@ -100,11 +101,14 @@
             border-color: #007bff;
             font-weight: 600;
             text-transform: uppercase;
+            padding: 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
         }
 
-        .contact-form button:disabled {
-            background-color: #ccc;
-            border-color: #ccc;
+        .contact-form button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
         }
 
         .output-message {
