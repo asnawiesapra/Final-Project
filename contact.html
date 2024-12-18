@@ -9,12 +9,13 @@
     <style>
         /* General Styles */
         body {
-            background-color: #f7f7f7;
+            background-color: #f8f9fa;
             font-family: 'Arial', sans-serif;
         }
 
         h1 {
             font-weight: 700;
+            color: #333;
         }
 
         /* Navbar Styling */
@@ -70,7 +71,7 @@
             background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
 
@@ -145,7 +146,18 @@
             max-height: 100%;
             width: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 20px;
+            }
+
+            .contact-image {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -158,7 +170,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="index.html">
                     <img src="logo.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-top" />
-                    Contact
+                    My Website
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -188,11 +200,15 @@
     </header>
 
     <!-- Main content -->
-    <div class="container my-5 text-center">
+    <div class="container my-5">
         <div class="spinner" id="spinner"></div>
         <div class="row">
             <div class="col-md-6">
+                <img class="contact-image img-fluid" src="info.png" alt="Information" />
+            </div>
+            <div class="col-md-6">
                 <form id="contact-form" onsubmit="handleSubmit(event)" class="contact-form">
+                    <h1>Contact Us</h1>
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" class="form-control" required />
